@@ -1,0 +1,74 @@
+"Node","Nature","Size","NumericID","TotalWeight"
+"warming","Physical",20.5,1,508
+"heat wave","Physical",3.97213595499958,2,20
+"atrazine","Chemical",8.66515138991168,3,99
+"uv-b","Physical",7.11577310586391,4,57
+"ammonia","Chemical",4.79150262212918,5,23
+"temperature range","Physical",8.7736184954957,6,81
+"carbaryl","Chemical",5.66441400296898,7,56
+"increased carbon dioxide","Chemical",5.41607978309962,8,61
+"copper","Chemical",15.6245154965971,9,579
+"nutrient enrichment","Chemical",14.2648230602334,10,306
+"cadmium","Chemical",15.2480157480236,11,549
+"manganese","Chemical",3.37298334620742,12,182
+"metal mixture","Chemical",4.8851648071345,13,25
+"zinc","Chemical",11.828828005938,14,436
+"ph range","Chemical",5.06776436283002,15,58
+"shading","Physical",6.64142842854285,16,117
+"2,4-d","Chemical",4.19041575982343,17,16
+"nonylphenol","Chemical",4.08257569495584,18,18
+"low ph","Chemical",6.57106781186548,19,102
+"phosphorus","Chemical",10.8578166916005,20,239
+"drought","Physical",3.97213595499958,21,27
+"uv light","Physical",7.74621125123532,22,115
+"chlorpyrifos","Chemical",9.7469507659596,23,141
+"bisphenol a","Chemical",5.90312423743285,24,39
+"flow velocity","Physical",5.06776436283002,25,74
+"estradiol","Chemical",5.58276253029822,26,44
+"ethinylestradiol","Chemical",5.98074069840786,27,30
+"chromium","Chemical",4.97722557505166,28,256
+"nitrate","Chemical",6.42820323027551,29,67
+"lead","Chemical",8.66515138991168,30,361
+"increased salinity","Chemical",8.10232526704263,31,77
+"glyphosate","Chemical",8.44427190999916,32,74
+"sedimentation","Physical",6.28232998312527,33,104
+"nutrient ratio","Chemical",3.62310562561766,34,30
+"triclosan","Chemical",5.66441400296898,35,27
+"benzo[a]pyrene","Chemical",3.85889894354067,36,19
+"fluoxetine","Chemical",5.15685424949238,37,12
+"low oxygen concentration","Chemical",8.38819441731559,38,84
+"dissolved organic carbon","Chemical",4.69615242270663,39,100
+"cypermethrin","Chemical",4.19041575982343,40,33
+"nitrogen","Chemical",9.64889156509222,41,188
+"phosphate","Chemical",4.5,42,41
+"batrachochytrium dendrobatidis","Biological",3.74264068711928,43,19
+"light intensity","Physical",6.5,44,83
+"mercury","Chemical",5.5,45,156
+"malathion","Chemical",5.41607978309962,46,76
+"water level","Physical",4.97722557505166,47,22
+"cyanobacteria bloom","Biological",4.19041575982343,48,21
+"calcium","Chemical",4.39897948556636,49,31
+"titanium nanoparticles","Phys/Chem",7.18114574786861,50,56
+"iron","Chemical",3.74264068711928,51,137
+"imidacloprid","Chemical",5.24456264653803,52,46
+"arsenic","Chemical",4.79150262212918,53,226
+"uv-a","Physical",3.37298334620742,54,16
+"perfluorooctanesulfonic acid","Chemical",3.62310562561766,55,18
+"temperature variability","Physical",4.19041575982343,56,28
+"microcystin-lr","BioChem",4.39897948556636,57,16
+"endosulfan","Chemical",3.37298334620742,58,13
+"aluminium","Chemical",5.15685424949238,59,146
+"humic acid","Chemical",3.37298334620742,60,13
+"silver nanoparticles","Phys/Chem",4.08257569495584,61,30
+"diclofenac","Chemical",4.08257569495584,62,12
+"diazinon","Chemical",4.5,63,33
+"zinc nanoparticles","Phys/Chem",5.24456264653803,64,39
+"copper nanoparticles","Phys/Chem",3.62310562561766,65,18
+"nickel","Chemical",6.98331477354788,66,309
+"diuron","Chemical",4.59901951359278,67,33
+"polystyrene","Phys/Chem",3.85889894354067,68,17
+"microplastic beads","Phys/Chem",3.74264068711928,69,12
+"microspheres","Phys/Chem",3.37298334620742,70,11
+"dissolved organic matter","Chemical",3.5,71,64
+"other chemical mixture","Chemical",3.37298334620742,72,10
+"sulfamethoxazole","Chemical",4.08257569495584,73,8

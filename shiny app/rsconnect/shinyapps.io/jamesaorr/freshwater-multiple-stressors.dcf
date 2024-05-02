@@ -1,0 +1,12 @@
+name: freshwater-multiple-stressors
+title: freshwater-multiple-stressors
+username: jamesaorr
+account: jamesaorr
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 10727818
+bundleId: 8474220
+url: https://jamesaorr.shinyapps.io/freshwater-multiple-stressors/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

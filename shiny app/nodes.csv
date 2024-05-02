@@ -1,0 +1,216 @@
+"Node","Nature","TotalWeight","NumericID"
+"warming","Physical",627,1
+"heat wave","Physical",26,2
+"atrazine","Chemical",172,3
+"uv-b","Physical",70,4
+"ammonia","Chemical",26,5
+"temperature range","Physical",97,6
+"carbaryl","Chemical",71,7
+"increased carbon dioxide","Chemical",71,8
+"copper","Chemical",672,9
+"nutrient enrichment","Chemical",382,10
+"cadmium","Chemical",651,11
+"manganese","Chemical",187,12
+"metal mixture","Chemical",37,13
+"wastewater effluent","Mixed",26,14
+"zinc","Chemical",478,15
+"ph range","Chemical",63,16
+"shading","Physical",138,17
+"2,4-d","Chemical",29,18
+"nonylphenol","Chemical",21,19
+"species loss","Biological",24,20
+"low ph","Chemical",125,21
+"phosphorus","Chemical",284,22
+"drought","Physical",36,23
+"uv light","Physical",132,24
+"chlorpyrifos","Chemical",217,25
+"bisphenol a","Chemical",62,26
+"hardness","Chemical",58,27
+"esfenvalerate","Chemical",17,28
+"flow velocity","Physical",85,29
+"estradiol","Chemical",72,30
+"herbicide mixture","Chemical",24,31
+"ethinylestradiol","Chemical",59,32
+"chromium","Chemical",274,33
+"nitrate","Chemical",73,34
+"lead","Chemical",388,35
+"increased salinity","Chemical",95,36
+"glyphosate","Chemical",98,37
+"terbuthylazine","Chemical",23,38
+"sedimentation","Physical",111,39
+"beta-naphthoflavone","Chemical",2,40
+"nutrient ratio","Chemical",31,41
+"triclosan","Chemical",60,42
+"benzo[a]pyrene","Chemical",28,43
+"cadmium chloride","Chemical",7,44
+"fluoxetine","Chemical",42,45
+"cooling","Physical",9,46
+"low oxygen concentration","Chemical",98,47
+"insecticide mixture","Chemical",5,48
+"deltamethrin","Chemical",30,49
+"tributyltin","Chemical",9,50
+"ammonium","Chemical",27,51
+"dissolved organic carbon","Chemical",109,52
+"ammonium nitrate","Chemical",16,53
+"nitrite","Chemical",16,54
+"4-tert-octylphenol","Chemical",27,55
+"cypermethrin","Chemical",57,56
+"nitrogen","Chemical",231,57
+"pharmaceutical mixture","Chemical",8,58
+"diquat","Chemical",2,59
+"methylmercury","Chemical",45,60
+"phosphate","Chemical",44,61
+"industrial effluent","Mixed",1,62
+"arsenate","Chemical",9,63
+"batrachochytrium dendrobatidis","Biological",25,64
+"light intensity","Physical",98,65
+"phenanthrene","Chemical",15,66
+"pyrene","Chemical",12,67
+"gamma radiation","Physical",22,68
+"western mosquitofish (gambusia affinis)","Biological",9,69
+"pah mixture","Chemical",5,70
+"mercury","Chemical",162,71
+"malathion","Chemical",120,72
+"permethrin","Chemical",54,73
+"naphthalene","Chemical",5,74
+"biocide mixture","Chemical",17,75
+"water level","Physical",29,76
+"cyanobacteria bloom","Biological",23,77
+"resource availability","Biological",13,78
+"calcium","Chemical",32,79
+"water grade","Mixed",7,80
+"titanium nanoparticles","Phys/Chem",67,81
+"iron","Chemical",138,82
+"habitat complexity","Physical",3,83
+"imidacloprid","Chemical",93,84
+"arsenic","Chemical",243,85
+"propiconazole","Chemical",8,86
+"community composition","Biological",35,87
+"pyrimethanil","Chemical",5,88
+"uv-a","Physical",23,89
+"perfluorooctanesulfonic acid","Chemical",27,90
+"temperature variability","Physical",33,91
+"azinphos-methyl","Chemical",15,92
+"species abundance","Biological",11,93
+"microcystin-lr","BioChem",23,94
+"endosulfan","Chemical",16,95
+"chlorothalonil","Chemical",18,96
+"sediment type","Physical",27,97
+"sodium nitrate","Chemical",5,98
+"aluminium","Chemical",156,99
+"brownification","Physical",13,100
+"humic acid","Chemical",18,101
+"fullerene","Phys/Chem",12,102
+"norfloxacin","Chemical",26,103
+"silver nanoparticles","Phys/Chem",35,104
+"alpha-cypermethrin","Chemical",9,105
+"fungicide mixture","Chemical",6,106
+"selenomethionine","Chemical",7,107
+"decabromodiphenyl ether","Chemical",4,108
+"flow regime","Physical",12,109
+"zebra mussels (dreissena polymorpha)","Biological",12,110
+"diphenhydramine","Chemical",14,111
+"diclofenac","Chemical",34,112
+"diazinon","Chemical",48,113
+"propranolol","Chemical",14,114
+"zinc nanoparticles","Phys/Chem",45,115
+"rainbow trout (oncorhynchus mykiss)","Biological",5,116
+"copper nanoparticles","Phys/Chem",27,117
+"fluoranthene","Chemical",16,118
+"silver","Chemical",49,119
+"blue gum (eucalyptus globulus)","Biological",9,120
+"levonorgestrel","Chemical",16,121
+"carbon nanotubes","Phys/Chem",12,122
+"antibiotic mixture","Chemical",4,123
+"17 beta trenbolone","Chemical",8,124
+"tebuconazole","Chemical",27,125
+"magnesium","Chemical",11,126
+"nickel","Chemical",333,127
+"dbp","Chemical",5,128
+"carbofuran","Chemical",14,129
+"diuron","Chemical",57,130
+"ciprofloxacin","Chemical",35,131
+"linuron","Chemical",3,132
+"polystyrene","Phys/Chem",19,133
+"ibuprofen","Chemical",24,134
+"leaf litter type","Biological",12,135
+"roxithromycin","Chemical",14,136
+"azoxystrobin","Chemical",33,137
+"estrone","Chemical",37,138
+"tetrabromobisphenol-a","Chemical",8,139
+"erythromycin","Chemical",41,140
+"thiacloprid","Chemical",12,141
+"citalopram","Chemical",10,142
+"tetracycline","Chemical",29,143
+"agricultural effluent","Mixed",8,144
+"microplastic beads","Phys/Chem",17,145
+"microspheres","Phys/Chem",14,146
+"enrofloxacin","Chemical",4,147
+"dissolved organic matter","Chemical",77,148
+"benzalkonium chloride","Chemical",4,149
+"florfenicol","Chemical",9,150
+"golden mussel (limnoperna fortunei)","Biological",7,151
+"nutrient limitation","Chemical",6,152
+"octocrylene","Chemical",5,153
+"polychlorinated biphenyls","Chemical",5,154
+"other chemical mixture","Chemical",21,155
+"pentachlorophenol","Chemical",13,156
+"bifenthrin","Chemical",20,157
+"nanoplastics","Phys/Chem",16,158
+"4-nonylphenol","Chemical",19,159
+"lambda-cyhalothrin","Chemical",33,160
+"polystyrene nanoparticles","Phys/Chem",7,161
+"methyl parathion","Chemical",14,162
+"sertraline","Chemical",18,163
+"carbamazepine","Chemical",26,164
+"salinity variation","Chemical",8,165
+"arsenite","Chemical",10,166
+"graphene oxide","Phys/Chem",14,167
+"venlafaxine","Chemical",11,168
+"ofloxacin","Chemical",16,169
+"artificial light","Physical",10,170
+"thiamethoxam","Chemical",67,171
+"mosquitofish (gambusia holbrooki)","Biological",6,172
+"fipronil","Chemical",11,173
+"ketoprofen","Chemical",14,174
+"caffeine","Chemical",14,175
+"sulfamethoxazole","Chemical",51,176
+"cerium nanoparticles","Phys/Chem",10,177
+"selenium","Chemical",49,178
+"clothianidin","Chemical",15,179
+"ketoconazole","Chemical",6,180
+"lindane","Chemical",10,181
+"2,4-dichlorophenol","Chemical",5,182
+"dissolved humic materials","Chemical",15,183
+"cobalt","Chemical",96,184
+"agricultural land-use","Physical",8,185
+"perfluorooctanoic acid","Chemical",7,186
+"metolachlor","Chemical",11,187
+"sodium chloride","Chemical",47,188
+"chloramphenicol","Chemical",5,189
+"clofibric acid","Chemical",6,190
+"irgarol","Chemical",18,191
+"prochloraz","Chemical",35,192
+"isoproturon","Chemical",8,193
+"trimethoprim","Chemical",27,194
+"clarithromycin","Chemical",20,195
+"s-metolachlor","Chemical",15,196
+"oxybenzone","Chemical",5,197
+"alachlor","Chemical",7,198
+"paraquat","Chemical",9,199
+"butachlor","Chemical",36,200
+"carbon","Chemical",43,201
+"triclocarban","Chemical",14,202
+"silicon","Chemical",42,203
+"bicarbonate","Chemical",4,204
+"natural organic matter","Chemical",11,205
+"prometryn","Chemical",6,206
+"sodium dodecyl benzene sulfonate","Chemical",7,207
+"difenoconazole","Chemical",2,208
+"sulfadiazine","Chemical",4,209
+"copper sulphate","Chemical",5,210
+"bezafibrate","Chemical",16,211
+"simazine","Chemical",15,212
+"sea nine 211","Chemical",3,213
+"iodopropynyl butylcarbamate","Chemical",7,214
+"dichlofluanid","Chemical",3,215

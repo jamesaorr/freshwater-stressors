@@ -1,0 +1,32 @@
+Nature,Class
+Physical,temperature
+Chemical,herbicide
+Chemical,alkalinity
+Chemical,carbon dioxide
+Physical,UV light
+Chemical,nutrients
+Chemical,insecticide
+Chemical,metals
+Composite,composite stressors
+Chemical,acidity
+Physical,visible light
+Chemical,other chemicals
+Biological,biological alterations
+Physical,hydrology
+Chemical,pharmaceuticals
+Chemical,salinity
+Physical,habitat alteration
+Chemical,general biocide
+Biological,non-native species
+Chemical,oxygen
+Physical,water clarity
+Biological,disease
+Physical,radiation
+Chemical,antibiotic
+Physical-Chemical,nanoparticles
+Chemical,fungicide
+Biological-Chemical,cyanotoxin
+Physical-Chemical,microplastics
+Biological,biological control
+Biological,domestic species
+Physical,sound
