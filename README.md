@@ -7,4 +7,4 @@ The "figures" folder contains an R notebook with the code used to reproduce the 
 
 The "shiny app" folder contains the R code used to create the interactive version of the dataset. 
 
-The "abstract screening" folder contains the results of the abstract screening process, which was performed using a novel machine learning tool called ASReview.
+The "abstract screening" folder contains the results of the abstract screening process, which was performed using a novel machine learning tool called ASReview. It also contains a folder called "simulation results" containing the data and code used for the simulation study testing the importance of the training data.
