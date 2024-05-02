@@ -1,0 +1,219 @@
+---
+title: "Results from simulation study"
+author: "James Orr"
+output:
+   html_notebook:
+     code_folding: hide
+     theme: flatly
+     toc: true
+     toc_depth: 4
+     number_sections: no
+---
+
+In this notebook, I'll take the results from the simulation studies (which were conducted in ASReview lab) and I'll create to figures to compare them:
+
+- plot of the recall curves for each of the three simulation runs
+
+- Venn diagram of overlap in identified records (based on WOS_ID) for the three simulations (up to 8% - as that is what we did for our abstract screening) 
+
+### Set up 
+
+```{r, results='hide'}
+# R version 4.3.1 (2023-06-16)
+
+rm(list = ls())           # clear the environment 
+
+# Packages
+library(tidyverse)        # organizing and manipulating data
+library(ggmagnify)        # zooming into a portion of a ggplot
+library(readxl)           # for reading in excel files
+
+
+#install.packages("ggmagnify", repos = c("https://hughjonesd.r-universe.dev", 
+#                 "https://cloud.r-project.org"))
+``` 
+
+Load data
+
+```{r}
+# recall plots
+random_recall <- read.csv("random-recall.csv", header = T)
+diverse_recall <- read.csv("diverse-recall.csv", header = T)
+biased_recall <- read.csv("biased-recall.csv", header = T)
+
+# actual results
+random_results <- read_excel("random-results.xlsx")
+diverse_results <- read_excel("diverse-results.xlsx")
+biased_results <- read_excel("biased-results.xlsx")
+```
+
+### Create recall plots 
+
+First organize the data (the training data has been put in at the end so we can ignore these final records and standardize curves as y axis is relevant records FOUND by ASReview, which is what we are interested in)
+
+```{r}
+random_recall <- random_recall %>%
+  filter(category < 30301) %>%
+  mutate(sim = "minimum")
+
+diverse_recall <- diverse_recall %>%
+  filter(category < 30301) %>%
+  mutate(sim = "diverse")
+
+biased_recall <- biased_recall %>%
+  filter(category < 30301) %>%
+  mutate(sim = "biased")
+
+recall <- rbind(random_recall, biased_recall, diverse_recall)
+rm(random_recall, biased_recall, diverse_recall)
+```
+
+
+```{r, fig.width=4, fig.height=4}
+png("plot.png", width = 4, height = 4, units = "in", res = 300)
+
+# set as. factor
+recall$sim <- factor(recall$sim, levels = c("minimum", "biased", "diverse"))
+
+# Create the main plot
+p <- ggplot(recall, aes(x = (category/30300)*100, 
+                                     y = (Relevant.by.ASReview.LAB/300)*100, 
+                                     color = sim)) +
+  
+  geom_vline(xintercept = 8, linetype = "dotted", color = "gray30") +
+  
+  # this line added too much clutter (just write those results in the text)
+  #geom_hline(yintercept = 99, linetype = "dotted", color = "gray30") +
+
+  geom_segment(aes(x = 0, y = 0, xend = 100, yend = 100), 
+                 color = "gray70", alpha = 0.5, size = 0.25) +
+  
+  geom_line() +
+  labs(x = "Records screened (%)", 
+       y = "Relevant records found (%)", 
+       color = "Training data") +
+  
+  scale_color_manual(values = c("#00BA38", "orange", "#619CFF")) +
+  
+  theme_bw() +
+    
+  theme(legend.position = "bottom",
+        panel.grid.major = element_line(color = "transparent"),
+        panel.grid.minor = element_line(color = "transparent")) 
+
+from <- c(xmin = 0, xmax = 1, ymin = 0, ymax = 35)
+to <- c(62, 99, 3, 50)
+
+# the code for the zoomed in subplot
+p + geom_magnify(from = from, to = to, colour = "gray70",
+                 proj = "single", shadow = T, linetype = "solid",
+                 shadow.args = list(sigma = 2, colour = "grey70", 
+                                    x_offset = 1, y_offset = 1))
+
+```
+
+Calculate % of relevant records found at 8% records screened
+
+```{r}
+# 30300*0.08 = 2424
+
+recall <- recall %>%
+  mutate(found_percent = (Relevant.by.ASReview.LAB/300)*100)
+
+select(subset(recall, recall$category == 2424), c(sim, found_percent))
+```
+
+Calculate % of records screened when 99% of relevant records are found
+
+```{r}
+# 300*0.99 = 297
+
+recall <- recall %>%
+  mutate(screened_percent = (category/30300)*100)
+
+recall_99 <- recall %>%
+  filter(Relevant.by.ASReview.LAB == 297) %>%
+  group_by(sim) %>%
+  # calculate the minimum - i.e., the first time this occurred
+  summarise(min(screened_percent))
+
+print(recall_99)
+
+rm(recall_99, p)
+```
+
+### Create venn diagram plots 
+
+First I need to load in the training data from the simulation so that we can remove the training records using their WOS_ID.
+
+```{r}
+training <- read.csv("training_data.csv", header = T)
+```
+
+Find the exact number of relevant at 8% screened (need this for the subsetting at 8%)
+
+```{r}
+subset(recall, recall$screened_percent == 8)
+```
+
+Organize the results data (remove training and extract all relevant records found by 8% records screened)
+
+For diverse and biased we need to remove the first 21 relevant records that were training data (i.e., restart our count at current 22)
+
+For biased we need to remove the first relevant record that was training data (i.e., restart our count at current 2)
+
+```{r}
+
+diverse_results_sub <- diverse_results %>%
+  # remove training data
+  filter(! WOS_ID %in% training$WOS_ID) %>%
+  # only consider included studies
+  filter(Included == 1) %>%
+  # set the correct order of asreview ranking
+  mutate(correct_found = asreview_ranking-21) %>%
+  # include all up to 289 (number for diverse - see above)
+  filter(correct_found <= 289)
+
+biased_results_sub <- biased_results %>%
+  filter(! WOS_ID %in% training$WOS_ID) %>%
+  filter(Included == 1) %>%
+  mutate(correct_found = asreview_ranking-21) %>%
+  filter(correct_found <= 287)
+
+random_results_sub <- random_results %>%
+  filter(! WOS_ID %in% training$WOS_ID) %>%
+  filter(Included == 1) %>%
+  mutate(correct_found = asreview_ranking-1) %>%
+  filter(correct_found <= 286)
+
+# just to confirm that there are 10 records not found by any (used a 4 way VD)
+#all_300 <- diverse_results %>%
+#  filter(! WOS_ID %in% training$WOS_ID) %>%
+#  filter(Included == 1)
+```
+
+
+```{r, fig.width=6, fig.height=6}
+
+library(ggVennDiagram)
+
+x <- list(biased = biased_results_sub$WOS_ID,
+          diverse = diverse_results_sub$WOS_ID,
+          random = random_results_sub$WOS_ID)
+
+ggVennDiagram(x, label = "count", label_alpha = 0, edge_size = 1.5,
+              label_size = 4.5,
+              category.names = c("Biased",
+                                 "Diverse",
+                                 "Minimum"),
+              set_color = c("orange", "#619CFF", "#00BA38")) +
+  
+  scale_color_manual(values = c("orange", "#619CFF", "#00BA38")) +
+  
+  labs(fill = "") +
+  
+  # this is rubbish but just a quick way to make the fill white
+  scale_fill_gradient(low = rgb(1, 1, 1), 
+                      high = rgb(1, 1, 1))
+```
+
