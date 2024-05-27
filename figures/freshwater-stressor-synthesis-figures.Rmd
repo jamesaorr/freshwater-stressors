@@ -85,7 +85,7 @@ countries$name_long <-replace(countries$name_long,
 # join experiment data to countries 
 world <- world %>%
   left_join(countries, by = "name_long") %>%
-  select(name_long, experiments)
+  dplyr::select(name_long, experiments)
 ```
 
 
@@ -496,11 +496,11 @@ rm(experiments_year, annual_growth_rates, experiments_growth_rates)
 
 ```{r}
 identity_data <- experiments %>%
-  select(contains("Identity")) %>%
+  dplyr::select(contains("Identity")) %>%
   gather(value = "Identity")
 
 class_data <- experiments %>%
-  select(contains("Class")) %>%
+  dplyr::select(contains("Class")) %>%
   gather(value = "Class")
 
 taxonomy <- data.frame(Class = class_data$Class, Identity = identity_data$Identity)
@@ -571,10 +571,10 @@ taxonomy <- taxonomy %>%
 
 ```{r}
 class_data <- experiments %>%
-  select(c(Year, contains("Class"))) %>%
+  dplyr::select(c(Year, contains("Class"))) %>%
   pivot_longer(cols = contains("Class")) %>%
   drop_na() %>%
-  select(-name) %>%
+  dplyr::select(-name) %>%
   mutate(Nature = ifelse(value %in% c("habitat alteration", "hydrology",  
                    "radiation", "sound", "temperature",
                    "UV light", "visible light", "water clarity"),
@@ -703,7 +703,7 @@ combinations_sub <- combinations
 
 # Select class columns
 class_network <- combinations_sub %>%
-  select(contains("Class"))
+  dplyr::select(contains("Class"))
 
 # Get unique classes
 unique_classes <- unique(unlist(class_network, use.names = FALSE), na.rm = TRUE)
@@ -810,10 +810,10 @@ rm(matrix)
 ```{r}
 ## filter identities (only if they occur five times)
 identity_data <- experiments %>%
-  select(contains("Identity")) %>%
+  dplyr::select(contains("Identity")) %>%
   gather(value = "Identity")
 class_data <- experiments %>%
-  select(contains("Class")) %>%
+  dplyr::select(contains("Class")) %>%
   gather(value = "Class")
 taxonomy <- data.frame(Class = class_data$Class, Identity = identity_data$Identity)
 taxonomy <- taxonomy %>%
@@ -850,7 +850,7 @@ combinations_sub <- combinations #%>%
 
 # Select class columns
 identity_network <- combinations_sub %>%
-  select(contains("Identity")) %>%
+  dplyr::select(contains("Identity")) %>%
   mutate(across(everything(), ~ifelse(. %in% taxonomy$Identity, ., NA)))
   
 
