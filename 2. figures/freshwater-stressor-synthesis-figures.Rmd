@@ -45,7 +45,7 @@ experiments <- read.csv("data/freshwater_multistressor_experiments.csv", header 
 combinations <- read.csv("data/freshwater_multistressor_combinations.csv", header = T)
 ```
 
-## Figure 1 - Overview
+## Figure 2 - Overview
 
 - *Map of experiments*
 
@@ -492,7 +492,7 @@ axis(4, at = seq(0, 300 / 150, by = 60 / 150),
 rm(experiments_year, annual_growth_rates, experiments_growth_rates)
 ```
 
-## Table 1 - Taxonomy
+## Figure 3 - Taxonomy
 
 ```{r}
 identity_data <- experiments %>%
@@ -565,7 +565,7 @@ taxonomy <- taxonomy %>%
 
 ```
 
-## Figure 2 - Stressor Classes
+## Figure 4 - Stressor Classes
 
 - *Stressor natures over time*
 
@@ -805,7 +805,7 @@ ggplot(matrix, aes(x = Var1, y = Var2, fill = value)) +
 rm(matrix)
 ```
 
-## Figure 3 - Stressor Identities
+## Figure 5 - Stressor Identities
 
 ```{r}
 ## filter identities (only if they occur five times)
